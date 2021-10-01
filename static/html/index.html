@@ -1,0 +1,24 @@
+<ul>
+  <!-- including dot only in file name => accessible omitting /file(.html) -->
+  <li><a href="./ok.file.html"> ./ok.file.html </a></li>
+  <!-- including dot only in file name => accessible omitting /file(.html) -->
+  <li><a href="./ok.file"> ./ok.file </a></li>
+  <!-- including no dot and filename is index => accessible omitting /index(.html) -->
+  <li><a href="./ok/index.html"> ./ok/index.html </a></li>
+  <!-- including no dot and filename is index => accessible omitting /index(.html) -->
+  <li><a href="./ok/"> ./ok/ </a></li>
+  <!-- including no dot and filename is not index => accessible normally -->
+  <li><a href="./ok/test.html"> ./ok/test.html </a></li>
+  <!-- including dot in dir name and index.html => no accessible with file name "." included and it has index file -->
+  <li><a href="./ng.dir/index.html"> ./ng.dir/index.html </a></li>
+  <!-- including dot in dir name and index.html => no accessible with file name "." included and it has index file -->
+  <li><a href="./ng.dir/index"> ./ng.dir/index </a></li>
+  <!-- including dot in dir name and index.html => no accessible with file name "." included and it has index file  -->
+  <li><a href="./ng.dir/"> ./ng.dir/ </a></li>
+  <!-- including dot only in file name => accessible even if filename has two more than equals "." unless directory has it -->
+  <li><a href="./ok/test.file.html"> ./ok/test.file.html </a></li>
+  <!-- including dot in dir name only => accessible even if directory name has "." unless distination is index  -->
+  <li><a href="./ok.dir/test.html"> ./ok.dir/test.html </a></li>
+  <!-- including dot in dir name only => accessible even if directory name has "." unless distination is index omitting html -->
+  <li><a href="./ok.dir/test"> ./ok.dir/test </a></li>
+</ul>
